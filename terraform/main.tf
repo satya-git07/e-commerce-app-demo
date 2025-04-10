@@ -1,6 +1,6 @@
 provider "google" {
-  region  = "us-central1"
-  zone    = "us-central1-a"
+  region  = var.project_id
+  zone    = var.region
 }
 
 #creating the vm-instances
@@ -16,7 +16,7 @@ module "gcp_instance" {
 
 #creating the cluster
 module "gke_cluster" {
-  source = "./modules/gke-cluster"
+  source = "./modules/gcp-k8s"
 
   cluster_name          = "my-gke-cluster"
   region                = "us-central1"
