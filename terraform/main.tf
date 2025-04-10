@@ -4,7 +4,7 @@ provider "google" {
 }
 
 module "gcp_instance" {
-  source        = "./modules/vm-instance"
+  source        = "./modules/vm-resources"
   instance_name = "naruto12"
   machine_type  = "e2-micro"
   image         = "centos-cloud/centos-stream-9"
