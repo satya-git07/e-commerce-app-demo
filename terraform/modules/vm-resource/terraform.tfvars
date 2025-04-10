@@ -1,0 +1,5 @@
+instance_name = "custom-vm"
+machine_type  = "e2-small"
+image         = "centos-cloud/centos-stream-9"
+network       = "default"
+zone          = "us-central1-b"
