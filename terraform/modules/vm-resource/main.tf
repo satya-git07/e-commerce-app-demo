@@ -1,16 +1,16 @@
 resource "google_compute_instance" "test1" {
-  name         = "naruto12"
-  machine_type = "e2-micro"
+  name         = var.instance_name
+  machine_type = var.machine_type
+  zone         = var.zone
 
   boot_disk {
     initialize_params {
-      image = "centos-cloud/centos-stream-9"
+      image = var.image
     }
   }
 
   network_interface {
-    network = "default"
-    access_config {
-    }
+    network = var.network
+    access_config {}
   }
 }
